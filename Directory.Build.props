@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <!-- Arch Linux's dotnet-sdk reports RID arch-x64 instead of falling back to
+         linux-x64, so the ASP.NET Core Sdk.Web prune-package-data lookup finds no
+         entry for this RID. Harmless to skip: it only disables an optimization that
+         trims transitive packages already in the shared framework. -->
+    <AllowMissingPrunePackageData>true</AllowMissingPrunePackageData>
+  </PropertyGroup>
+</Project>
